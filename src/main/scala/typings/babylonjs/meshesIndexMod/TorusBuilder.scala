@@ -1,0 +1,35 @@
+package typings.babylonjs.meshesIndexMod
+
+import typings.babylonjs.anon.Thickness
+import typings.babylonjs.sceneMod.Scene
+import org.scalablytyped.runtime.StObject
+import scala.scalajs.js
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+object TorusBuilder {
+  
+  @JSImport("babylonjs/Meshes/index", "TorusBuilder")
+  @js.native
+  val ^ : js.Any = js.native
+  
+  @JSImport("babylonjs/Meshes/index", "TorusBuilder.CreateTorus")
+  @js.native
+  def CreateTorus: js.Function3[
+    /* name */ String, 
+    /* options */ js.UndefOr[Thickness], 
+    /* scene */ js.UndefOr[Scene], 
+    typings.babylonjs.meshesMeshMod.Mesh
+  ] = js.native
+  inline def CreateTorus(name: String): typings.babylonjs.meshesMeshMod.Mesh = ^.asInstanceOf[js.Dynamic].applyDynamic("CreateTorus")(name.asInstanceOf[js.Any]).asInstanceOf[typings.babylonjs.meshesMeshMod.Mesh]
+  inline def CreateTorus(name: String, options: Unit, scene: Scene): typings.babylonjs.meshesMeshMod.Mesh = (^.asInstanceOf[js.Dynamic].applyDynamic("CreateTorus")(name.asInstanceOf[js.Any], options.asInstanceOf[js.Any], scene.asInstanceOf[js.Any])).asInstanceOf[typings.babylonjs.meshesMeshMod.Mesh]
+  inline def CreateTorus(name: String, options: Thickness): typings.babylonjs.meshesMeshMod.Mesh = (^.asInstanceOf[js.Dynamic].applyDynamic("CreateTorus")(name.asInstanceOf[js.Any], options.asInstanceOf[js.Any])).asInstanceOf[typings.babylonjs.meshesMeshMod.Mesh]
+  inline def CreateTorus(name: String, options: Thickness, scene: Scene): typings.babylonjs.meshesMeshMod.Mesh = (^.asInstanceOf[js.Dynamic].applyDynamic("CreateTorus")(name.asInstanceOf[js.Any], options.asInstanceOf[js.Any], scene.asInstanceOf[js.Any])).asInstanceOf[typings.babylonjs.meshesMeshMod.Mesh]
+  inline def CreateTorus_=(
+    x: js.Function3[
+      /* name */ String, 
+      /* options */ js.UndefOr[Thickness], 
+      /* scene */ js.UndefOr[Scene], 
+      typings.babylonjs.meshesMeshMod.Mesh
+    ]
+  ): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("CreateTorus")(x.asInstanceOf[js.Any])
+}

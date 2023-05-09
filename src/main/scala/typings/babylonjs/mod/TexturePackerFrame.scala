@@ -1,0 +1,23 @@
+package typings.babylonjs.mod
+
+import org.scalablytyped.runtime.StObject
+import scala.scalajs.js
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+@JSImport("babylonjs", "TexturePackerFrame")
+@js.native
+open class TexturePackerFrame protected ()
+  extends typings.babylonjs.legacyLegacyMod.TexturePackerFrame {
+  /**
+    * Initializes a texture package frame.
+    * @param id The numerical frame identifier
+    * @param scale Scalar Vector2 for UV frame
+    * @param offset Vector2 for the frame position in UV units.
+    * @returns TexturePackerFrame
+    */
+  def this(
+    id: Double,
+    scale: typings.babylonjs.mathsMathDotvectorMod.Vector2,
+    offset: typings.babylonjs.mathsMathDotvectorMod.Vector2
+  ) = this()
+}
