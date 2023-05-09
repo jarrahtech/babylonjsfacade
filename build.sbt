@@ -4,12 +4,19 @@ ThisBuild / versionScheme := Some("early-semver")
 ThisBuild / githubOwner := "jarrahtech"
 ThisBuild / githubRepository := "babylonjsfacade"
 
+val babylonjsVersion = "6.2.0"
+
 lazy val root = project.in(file("."))
-  .enablePlugins(ScalaJSPlugin) 
+  .enablePlugins(ScalablyTypedConverterGenSourcePlugin) 
   .settings(
     name := "babylonjsfacade",
-    version := "6.2.0",    
-    sources in (Compile, doc) := Nil,
-    libraryDependencies += "com.olvind" %%% "scalablytyped-runtime" % "2.4.2",
-    libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "2.4.0",
+    version := babylonjsVersion,    
+
+    Compile / npmDependencies ++= Seq(
+      "babylonjs" -> babylonjsVersion
+    ),
+    stMinimize := Selection.AllExcept("babylonjs"),
+    Global / stQuiet := true,
+    Compile / doc / sources := Nil,
+    stOutputPackage := "facade",
   )
