@@ -4,7 +4,7 @@ ThisBuild / versionScheme := Some("early-semver")
 ThisBuild / githubOwner := "jarrahtech"
 ThisBuild / githubRepository := "babylonjsfacade"
 
-val babylonjsVersion = "6.14.0"
+val babylonjsVersion = "6.14.1"
 
 lazy val root = project.in(file("."))
   .enablePlugins(ScalablyTypedConverterGenSourcePlugin) 
@@ -16,7 +16,7 @@ lazy val root = project.in(file("."))
       "babylonjs" -> babylonjsVersion,
       "babylonjs-gui" -> babylonjsVersion
     ),
-    stMinimize := Selection.AllExcept("babylonjs"),
+    stMinimize := Selection.AllExcept("babylonjs",  "babylonjs-gui"),
     Global / stQuiet := true,
     Compile / doc / sources := Nil,
     stOutputPackage := "facade",
